@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: DSEG7;
-    src: url(DSEG7Modern-Regular.woff2);
+    src: url(./assets/fonts/DSEG7Modern-Regular.woff2);
 }
 
 * {
@@ -20,6 +20,16 @@ body {
     font-family: sans-serif;
     margin-top: 15vh;
     text-align: center;
+}
+
+button,
+div,
+span,
+table {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .display-wrapper {
