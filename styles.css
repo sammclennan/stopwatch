@@ -1,0 +1,134 @@
+:root {
+    --display-font-size: min(13vw, 120px); 
+}
+
+@font-face {
+    font-family: DSEG7;
+    src: url(DSEG7Modern-Regular.woff2);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 6%);
+    color: hsl(0, 0%, 100%);
+    font-family: sans-serif;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.display-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: var(--display-font-size);
+    gap: 0.15em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0.2em;
+}
+
+.hidden {
+    display: none;
+}
+
+.hundredths {
+    font-size: 0.75em;
+}
+
+.seven-seg {
+    font-family: DSEG7, Arial;
+}
+
+.time-display {
+    background:
+        radial-gradient(circle at 70% 30%, hsl(131, 38%, 94%), transparent),
+        -webkit-gradient(linear, left top, left bottom, from(hsl(126, 24%, 83%)), to(hsl(125, 19%, 76%)));
+    background:
+        -o-radial-gradient(70% 30%, circle, hsl(131, 38%, 94%), transparent),
+        -o-linear-gradient(hsl(126, 24%, 83%), hsl(125, 19%, 76%));
+    background:
+        radial-gradient(circle at 70% 30%, hsl(131, 38%, 94%), transparent),
+        linear-gradient(hsl(126, 24%, 83%), hsl(125, 19%, 76%));
+    border: 0.05em solid hsl(0, 0%, 9%);
+    border-radius: 0.15em;
+    -webkit-box-shadow: 0 0 0 0.025em hsl(58, 99%, 53%);
+            box-shadow: 0 0 0 0.025em hsl(58, 99%, 53%);
+    color: hsl(130, 14%, 16%);
+    font-size: inherit;
+    padding: 0.15em;
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.timer-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.15em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.timer-control {
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(0, 0%, 50%)), to(hsl(0, 0%, 25%)));
+    background: -o-linear-gradient(hsl(0, 0%, 50%), hsl(0, 0%, 25%));
+    background: linear-gradient(hsl(0, 0%, 50%), hsl(0, 0%, 25%));
+    border: none;
+    border-radius: 100%;
+    -webkit-box-shadow:
+        inset 0.1vw 0.2vw 0.4vw -0.1vw hsla(0, 0%, 100%, 0.3),
+        inset -0.2vw -0.4vw 0.2vw -0.2vw hsla(0, 0%, 0%, 0.40);
+            box-shadow:
+        inset 0.1vw 0.2vw 0.4vw -0.1vw hsla(0, 0%, 100%, 0.3),
+        inset -0.2vw -0.4vw 0.2vw -0.2vw hsla(0, 0%, 0%, 0.40);
+    color: hsl(0, 0%, 85%);
+    cursor: pointer;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 0.2em;
+    height: 2em;
+    text-transform: uppercase;
+    width: 5.5em;
+}
+
+.timer-control:active {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+}
+
+.lap-table {
+    color: hsl(60, 100%, 85%);
+    font-size: calc(var(--display-font-size) * 0.175);
+    margin: auto;
+    width: min(80%, 675px);
+}
+
+.lap-table tbody {
+    font-family: DSEG7, Arial;
+}
+
+.lap-table th,
+.lap-table td {
+    padding: calc(var(--display-font-size) * 0.075);
+}
+
+.lap-table thead {
+    font-family: 'Michroma', sans-serif;
+}
